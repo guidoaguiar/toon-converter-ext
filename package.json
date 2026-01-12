@@ -4,15 +4,11 @@
   "description": "Convert JSON files to TOON format",
   "version": "0.1.0",
   "engines": {
-    "vscode": "^1.74.0"
+    "vscode": "^1.108.0"
   },
   "categories": [
     "Formatters",
     "Other"
-  ],
-  "activationEvents": [
-    "onCommand:toonConverter.convertJsonToToon",
-    "onCommand:toonConverter.convertSelectionToToon"
   ],
   "main": "./out/extension.js",
   "contributes": {
@@ -55,7 +51,7 @@
   },
   "devDependencies": {
     "@types/node": "^18.0.0",
-    "@types/vscode": "^1.74.0",
+    "@types/vscode": "^1.75.0",
     "typescript": "^4.9.4"
   },
   "dependencies": {
@@ -65,7 +61,7 @@
     "type": "git",
     "url": "https://github.com/guidoaguiar/toon-converter-ext.git"
   },
-  "publisher": "your-publisher-name",
+  "publisher": "Guido Aguiar",
   "license": "MIT",
   "keywords": [
     "json",
