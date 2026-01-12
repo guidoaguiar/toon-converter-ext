@@ -1,0 +1,77 @@
+{
+  "name": "toon-converter",
+  "displayName": "JSON to TOON Converter",
+  "description": "Convert JSON files to TOON format",
+  "version": "0.1.0",
+  "engines": {
+    "vscode": "^1.74.0"
+  },
+  "categories": [
+    "Formatters",
+    "Other"
+  ],
+  "activationEvents": [
+    "onCommand:toonConverter.convertJsonToToon",
+    "onCommand:toonConverter.convertSelectionToToon"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "toonConverter.convertJsonToToon",
+        "title": "Convert JSON to TOON",
+        "category": "TOON Converter"
+      },
+      {
+        "command": "toonConverter.convertSelectionToToon",
+        "title": "Convert Selection to TOON",
+        "category": "TOON Converter"
+      }
+    ],
+    "menus": {
+      "editor/context": [
+        {
+          "command": "toonConverter.convertSelectionToToon",
+          "when": "editorHasSelection",
+          "group": "toon"
+        }
+      ],
+      "commandPalette": [
+        {
+          "command": "toonConverter.convertJsonToToon",
+          "title": "TOON: Convert JSON to TOON"
+        },
+        {
+          "command": "toonConverter.convertSelectionToToon",
+          "title": "TOON: Convert Selection to TOON"
+        }
+      ]
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./"
+  },
+  "devDependencies": {
+    "@types/node": "^18.0.0",
+    "@types/vscode": "^1.74.0",
+    "typescript": "^4.9.4"
+  },
+  "dependencies": {
+    "@toon-format/toon": "^1.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/toon-converter-ext.git"
+  },
+  "publisher": "your-publisher-name",
+  "license": "MIT",
+  "keywords": [
+    "json",
+    "toon",
+    "converter",
+    "format",
+    "transform"
+  ]
+}
